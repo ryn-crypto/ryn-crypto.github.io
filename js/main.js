@@ -304,16 +304,18 @@ function bodyscrollingToggle(){
 
 // hide all section exept active
 
-(() =>{
+// (() =>{
 
-	const section = document.querySelectorAll(".section");
-	section.forEach((section) =>{
-		if(!section.classList.contains("active")){
-			section.classList.add("hide");
-		}
-	})
+// 	const section = document.querySelectorAll(".section");
+// 	section.forEach((section) =>{
+// 		if(!section.classList.contains("active")){
+// 			section.classList.add("hide");
+// 		}
+// 	})
 
-})();
+// })();
+
+// save change color or mode (dark or light)
 
 window.addEventListener("load", () =>{
 	// preloader 
