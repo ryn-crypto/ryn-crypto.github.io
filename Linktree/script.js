@@ -11,7 +11,7 @@ function fetchDataAndFilter(tag) {
 
       for (let i = 0; i < filteredData.length; i += 2) {
         const row = document.createElement("div");
-        row.classList.add("row", "mb-3");
+        row.classList.add("row", "mb-2");
 
         for (let j = i; j < i + 2 && j < filteredData.length; j++) {
           const item = filteredData[j];
@@ -20,7 +20,7 @@ function fetchDataAndFilter(tag) {
           col.classList.add("col-md-6");
 
           const card = document.createElement("div");
-          card.classList.add("card", "mb-3");
+          card.classList.add("card", "mb-2");
 
           const link = document.createElement("a");
           link.classList.add("nav-link");
