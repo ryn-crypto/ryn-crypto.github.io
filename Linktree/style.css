@@ -8,7 +8,11 @@
 }
 
 body {
-  background-image: url("img/bg.svg");
+  background-image: linear-gradient(
+      rgba(83, 82, 82, 0.2),
+      rgba(106, 193, 217, 0.2)
+    ),
+    url("img/bg.svg");
   background-size: cover;
   background-attachment: fixed;
   font-family: "Roboto", sans-serif;

@@ -4,42 +4,42 @@
     "url": "https://meet.google.com/qob-gver-nhz",
     "tag": "GENERAL",
     "img": "MEET",
-    "description": "Link for weekly meeting"
+    "description": "Weekly meeting Link"
   },
   {
     "title": "MoM Meeting",
     "url": "https://drive.google.com/drive/folders/1Y3_o21_0lXtmSPe2Sg9eeibOBGN8XVzJ?usp=drive_link",
     "tag": "GENERAL",
     "img": "DOC",
-    "description": "Link google drive MoM meeting"
+    "description": "Google drive MoM meeting"
   },
   {
     "title": "Trello",
     "url": "https://trello.com/b/Yzt6kPoN/ch2-ps260-capstone-project",
     "tag": "GENERAL",
     "img": "TRELLO",
-    "description": "Link google drive MoM meeting"
+    "description": "Trello timeline"
   },
   {
     "title": "Project Plan",
     "url": "https://docs.google.com/document/d/1Gsp6ZJFZtkmn3vGACpyMU1Mf_dqORdjR9Ets_KXl1iQ/edit",
     "tag": "GENERAL",
     "img": "DOC",
-    "description": "Dokumen Untuk Project Plan"
+    "description": "Dokumen Project Plan"
   },
   {
     "title": "TimeLine",
     "url": "https://docs.google.com/spreadsheets/d/1cPZP5nS49Oye7x7WH1MyZqWjYzTkrCxaEqN97AKVUwo/edit?usp=drive_link",
     "tag": "GENERAL",
-    "img": "All",
-    "description": "Timeline Pengerjaan Project"
+    "img": "TIMELINE",
+    "description": "Timeline Project Plan"
   },
   {
     "title": "Api Contract",
     "url": "https://docs.google.com/document/d/1bQQv_Yh2k2aF_PWDtNGIEmXu6zOSCULG/edit?usp=sharing&ouid=115149354172403327260&rtpof=true&sd=true",
     "tag": "GENERAL",
     "img": "All",
-    "description": "Dokumen Api Contract semua divisi"
+    "description": "API Contract for all division"
   },
   {
     "title": "Figma Design",
@@ -60,20 +60,27 @@
     "url": "",
     "tag": "ML",
     "img": "ML",
-    "description": "Dataset resiko penyakit jantung"
+    "description": "Dataset heart disease"
   },
   {
     "title": "Dataset Diabetes",
     "url": "",
     "tag": "ML",
-    "img": "ML",
-    "description": "Dataset resiko diabetes"
+    "img": "DIABET",
+    "description": "Dataset diabetes"
   },
   {
     "title": "ERD",
     "url": "",
     "tag": "CC",
     "img": "CC",
+    "description": "Diagram Relasi Entity"
+  },
+  {
+    "title": "Flow Diagram",
+    "url": "",
+    "tag": "ALL",
+    "img": "ALL",
     "description": "Diagram Relasi Entity"
   }
 ]
