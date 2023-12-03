@@ -1,0 +1,79 @@
+[
+  {
+    "title": "Google Meet",
+    "url": "https://meet.google.com/qob-gver-nhz",
+    "tag": "GENERAL",
+    "img": "MEET",
+    "description": "Link for weekly meeting"
+  },
+  {
+    "title": "MoM Meeting",
+    "url": "https://drive.google.com/drive/folders/1Y3_o21_0lXtmSPe2Sg9eeibOBGN8XVzJ?usp=drive_link",
+    "tag": "GENERAL",
+    "img": "DOC",
+    "description": "Link google drive MoM meeting"
+  },
+  {
+    "title": "Trello",
+    "url": "https://trello.com/b/Yzt6kPoN/ch2-ps260-capstone-project",
+    "tag": "GENERAL",
+    "img": "TRELLO",
+    "description": "Link google drive MoM meeting"
+  },
+  {
+    "title": "Project Plan",
+    "url": "https://docs.google.com/document/d/1Gsp6ZJFZtkmn3vGACpyMU1Mf_dqORdjR9Ets_KXl1iQ/edit",
+    "tag": "GENERAL",
+    "img": "DOC",
+    "description": "Dokumen Untuk Project Plan"
+  },
+  {
+    "title": "TimeLine",
+    "url": "https://docs.google.com/spreadsheets/d/1cPZP5nS49Oye7x7WH1MyZqWjYzTkrCxaEqN97AKVUwo/edit?usp=drive_link",
+    "tag": "GENERAL",
+    "img": "All",
+    "description": "Timeline Pengerjaan Project"
+  },
+  {
+    "title": "Api Contract",
+    "url": "https://docs.google.com/document/d/1bQQv_Yh2k2aF_PWDtNGIEmXu6zOSCULG/edit?usp=sharing&ouid=115149354172403327260&rtpof=true&sd=true",
+    "tag": "GENERAL",
+    "img": "All",
+    "description": "Dokumen Api Contract semua divisi"
+  },
+  {
+    "title": "Figma Design",
+    "url": "https://www.figma.com/file/I554WiJpREwpTAIBSRQuj7/Capstone-Project-Mock-Up?type=design&node-id=0%3A1&mode=design&t=pC35aSmvGLMcpmiP-1",
+    "tag": "MD",
+    "img": "FIGMA",
+    "description": "Mobile app design mockup"
+  },
+  {
+    "title": "Figma WorkFlow",
+    "url": "https://www.figma.com/file/PVuEBIVAxWVbZFqqqOO11X/Work-Flow?type=whiteboard&node-id=0%3A1&t=xGvkB7Qd0JAwwkIY-1",
+    "tag": "MD",
+    "img": "WORKFLOW",
+    "description": "WorkFlow mobile App"
+  },
+  {
+    "title": "Dataset Jantung",
+    "url": "",
+    "tag": "ML",
+    "img": "ML",
+    "description": "Dataset resiko penyakit jantung"
+  },
+  {
+    "title": "Dataset Diabetes",
+    "url": "",
+    "tag": "ML",
+    "img": "ML",
+    "description": "Dataset resiko diabetes"
+  },
+  {
+    "title": "ERD",
+    "url": "",
+    "tag": "CC",
+    "img": "CC",
+    "description": "Diagram Relasi Entity"
+  }
+]

@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.navbar-nav .nav-link.title {
+  font-family: "Satisfy", sans-serif;
+  font-size: 30px;
+}
+
+body {
+  background-image: url("img/bg.svg");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-brand img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  padding: 5px;
+  border: 2px solid #262626;
+}
+
+.navbar-nav .nav-link.link {
+  font-size: 18px;
+}
+
+.navbar-nav .nav-link.link:hover {
+  color: rgb(45, 164, 197);
+  border-bottom: 2px solid rgb(45, 164, 197);
+}
+
+.navbar-nav .nav-link.active.title {
+  color: #242222;
+}
+
+.navbar-nav .nav-link.active {
+  color: rgb(45, 164, 197);
+}
+
+.row h1 {
+  text-shadow: 1px 1px 1px #000;
+}
