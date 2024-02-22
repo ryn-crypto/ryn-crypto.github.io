@@ -1,0 +1,22 @@
+{
+  "experienceData": [
+    {
+      "date": "January, 2023 - Now",
+      "title": "Machine Learning Developer",
+      "place": "DBS Foundation Coding Camp (DBS Foundation x Dicoding)",
+      "description": "As a newcomer to the realm of machine learning, I'm currently embarking on the journey of learning how to craft machine learning models. My focus lies in grasping the fundamental concepts such as data preprocessing, model selection, and model training. I'm exploring various technologies like TensorFlow and PyTorch to understand their roles in building predictive models. Each day, I delve deeper into the intricacies of machine learning algorithms and techniques, eager to comprehend their inner workings. While the path ahead may seem daunting, I'm fueled by curiosity and the excitement of unraveling the mysteries of artificial intelligence. Through diligent study and hands-on experimentation, I aim to evolve from a novice learner to a proficient practitioner in the captivating field of machine learning."
+    },
+    {
+      "date": "January, 2023 - Now",
+      "title": "Full Stack MEVN",
+      "place": "Campus Coder by DevHandal (Codepolitan x Alibaba Cloud)",
+      "description": "I am currently actively engaged in learning Full Stack MEVN, which includes MongoDB, Express.js, Vue.js, and Node.js. I am exploring the fundamental concepts and best practices in web application development with these technologies. Through online courses, tutorials, and personal projects, I am learning how to use MongoDB as a NoSQL database to store and manage data, as well as understanding how Express.js is used to create efficient backend servers. Additionally, I am delving into Vue.js to build dynamic and responsive user interfaces on the client side, and deepening my understanding of Node.js as a runtime environment for running JavaScript code on the server side. I am excited to continue developing my skills in Full Stack MEVN development and applying them in practical projects in the future."
+    },
+    {
+      "date": "Augustus 2023 - January, 2022",
+      "title": "Mobile Development Cohort",
+      "place": "Bangkit Academy by Google, Tokopedia, Gojek, & Traveloka",
+      "description": "As a mobile development cohort, I am responsible for creating a mobile application that meets demand. In projects that use a combination of technologies such as HTML, CSS, JavaScript, and PHP. Each application page is designed responsively and attractively using HTML and CSS, creating a user-friendly appearance for the user. For the server side, I use PHP as the main programming language and also use the CodeIgniter framework to connect the application to the MySQL database which is used to store data. I build CRUD functions that allow users to easily create, read, modify, and delete data."
+    }
+  ]
+}

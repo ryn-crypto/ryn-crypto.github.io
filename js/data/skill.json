@@ -1,0 +1,39 @@
+{
+  "skillsData": [
+    {
+      "name": "Kotlin",
+      "icon": "img/skill/kotlin_idle.png",
+      "icon_hover": "img/skill/kotlin.png"
+    },
+    {
+      "name": "Javascript",
+      "icon": "img/skill/javascript_idle.png",
+      "icon_hover": "img/skill/javascript.png"
+    },
+    {
+      "name": "PHP",
+      "icon": "img/skill/php_idle.png",
+      "icon_hover": "img/skill/php.png"
+    },
+    {
+      "name": "Compose",
+      "icon": "img/skill/jetpack_idle.png",
+      "icon_hover": "img/skill/jetpack.png"
+    },
+    {
+      "name": "SQLite",
+      "icon": "img/skill/sqlite_idle.png",
+      "icon_hover": "img/skill/sqlite.png"
+    },
+    {
+      "name": "Firebase",
+      "icon": "img/skill/firebase_idle.png",
+      "icon_hover": "img/skill/firebase.png"
+    },
+    {
+      "name": "MYSQL",
+      "icon": "img/skill/sql_idle.png",
+      "icon_hover": "img/skill/sql.png"
+    }
+  ]
+}
