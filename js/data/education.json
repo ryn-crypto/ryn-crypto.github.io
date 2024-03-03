@@ -1,16 +1,16 @@
 {
   "educationData": [
     {
-      "period": "2014 - 2017",
-      "degree": "Sekolah menengah kejuruan (TKJ)",
-      "institution": "SMK N 1 Bumi Agung",
-      "description": "The senior high school located in Mulyo Asri village is the first vocational high school, and I graduated in 2017 with the highest total score in the batch. By majoring in computer and network engineering, I was equipped with the skills to do light troubleshooting on computers and spoofed computers, there were also community activities skills that I got when I joined various organizations that required direct involvement in the community."
-    },
-    {
       "period": "2020 - on going",
       "degree": "Pendidikan sarjana (Sistem informasi)",
       "institution": "Universitas Bina Sarna Informatika",
       "description": "Bina Sarana Informatics University (UBSI) is a university that has a vision of becoming a superior university in the field of creative economy in 2033."
+    },
+    {
+      "period": "2014 - 2017",
+      "degree": "Sekolah menengah kejuruan (TKJ)",
+      "institution": "SMK N 1 Bumi Agung",
+      "description": "The senior high school located in Mulyo Asri village is the first vocational high school, and I graduated in 2017 with the highest total score in the batch. By majoring in computer and network engineering, I was equipped with the skills to do light troubleshooting on computers and spoofed computers, there were also community activities skills that I got when I joined various organizations that required direct involvement in the community."
     }
   ]
 }

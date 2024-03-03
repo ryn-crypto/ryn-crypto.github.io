@@ -1,3 +1,41 @@
+// typing animation
+const texts = ["Tech Enthusiast", "Android Developer", "Web Developer"];
+const typingSpeed = 100;
+const eraseSpeed = 50;
+let textIndex = 0;
+let charIndex = 0;
+let isTyping = false;
+
+function typeText() {
+  const currentText = texts[textIndex];
+  document.getElementById('typing-effect').textContent += currentText[charIndex];
+  charIndex++;
+  if (charIndex < currentText.length) {
+    setTimeout(typeText, typingSpeed);
+  } else {
+    isTyping = false;
+    setTimeout(eraseText, typingSpeed + 1000);
+  }
+}
+
+function eraseText() {
+  const currentText = document.getElementById('typing-effect').textContent;
+  if (currentText.length > 0) {
+    document.getElementById('typing-effect').textContent = currentText.substring(0, currentText.length - 1);
+    setTimeout(eraseText, eraseSpeed);
+  } else {
+    charIndex = 0;
+    textIndex = (textIndex + 1) % texts.length;
+    isTyping = true;
+    setTimeout(typeText, typingSpeed);
+  }
+}
+
+function startTypingEffect() {
+  if (isTyping) return;
+  typeText();
+}
+
 // Fungsi untuk memuat data JSON ke dalam elemen HTML
 function loadSkills() {
   var skillsContainer = document.querySelector('.skills .row');
@@ -9,7 +47,6 @@ function loadSkills() {
   fetch('./js/data/skill.json')
     .then(response => response.json())
     .then(data => {
-      console.log(data);
       // Iterasi melalui setiap objek dalam data JSON
       data.skillsData.forEach(function (skill) {
         // Buat elemen HTML untuk setiap keterampilan
@@ -144,4 +181,5 @@ window.onload = function () {
   loadExperience();
   loadSkills();
   loadEducation();
+  startTypingEffect();
 };
