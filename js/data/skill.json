@@ -34,6 +34,21 @@
       "name": "MYSQL",
       "icon": "img/skill/sql_idle.png",
       "icon_hover": "img/skill/sql.png"
+    },
+    {
+      "name": "Android Studio",
+      "icon": "img/skill/androidstudio_idle.png",
+      "icon_hover": "img/skill/androidstudio.png"
+    },
+    {
+      "name": "NodeJS",
+      "icon": "img/skill/nodejs_idle.png",
+      "icon_hover": "img/skill/nodejs.png"
+    },
+    {
+      "name": "Flutter",
+      "icon": "img/skill/flutter_idle.png",
+      "icon_hover": "img/skill/flutter.png"
     }
   ]
 }

@@ -1,5 +1,5 @@
 // typing animation
-const texts = ["Tech Enthusiast", "Android Developer", "Web Developer"];
+const texts = ["Program Analis", "Tech Enthusiast", "Android Developer", "Web Developer"];
 const typingSpeed = 100;
 const eraseSpeed = 50;
 let textIndex = 0;
@@ -176,10 +176,56 @@ function loadEducation() {
     });
 }
 
+// // Fungsi untuk memuat testimoni dari data JSON
+// function loadAchievements() {
+//   var container = document.querySelector('.testi-slider-container');
+
+//   // Bersihkan kontainer sebelum memuat data
+//   container.innerHTML = '';
+
+//   // Ambil data JSON menggunakan fetch
+//   fetch('./js/data/achievement.json')
+//     .then(response => response.json())
+//     .then(data => {
+//       // Iterasi melalui setiap testimoni dalam data JSON
+//       data.achievements.forEach(function (testimonial, index) {
+//         // Buat elemen HTML untuk setiap testimoni
+//         var item = document.createElement('div');
+//         item.className = 'testi-item' + (index === 0 ? ' active' : '');
+//         item.style.width = slideWidth + 'px';
+
+//         var leftQuote = document.createElement('i');
+//         leftQuote.className = 'fas fa-quote-left left';
+
+//         var rightQuote = document.createElement('i');
+//         rightQuote.className = 'fas fa-quote-right right';
+
+//         var img = document.createElement('img');
+//         img.src = testimonial.image;
+//         img.alt = 'achievement';
+
+//         var span = document.createElement('span');
+//         span.textContent = testimonial.name;
+
+//         // Susun elemen-elemen HTML
+//         item.appendChild(leftQuote);
+//         item.appendChild(rightQuote);
+//         item.appendChild(img);
+//         item.appendChild(span);
+
+//         container.appendChild(item);
+//       });
+//     })
+//     .catch(error => {
+//       console.error('Error fetching testimonials:', error);
+//     });
+// }
+
 // Panggil fungsi untuk memuat data saat halaman dimuat
 window.onload = function () {
   loadExperience();
   loadSkills();
   loadEducation();
+  // loadAchievements();
   startTypingEffect();
 };
