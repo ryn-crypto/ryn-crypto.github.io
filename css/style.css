@@ -1364,79 +1364,79 @@ portfolio popup
 testimonail section
 ----------------------*/
 
-.testimonail-section {
-  padding: 80px 0 80px;
+.achievement-section {
+  padding: 50px 0 50px;
   min-height: 100vh;
 }
 
-.testimonail-section .testi-box {
+.achievement-section .testi-box {
   width: 100%;
-  max-width: 600px;
+  max-width: 1000px;
   margin: auto;
-  padding: 0 15px;
+  /* padding: 0 15px; */
 }
 
-.testimonail-section .testi-slider {
+.achievement-section .testi-slider {
   border-radius: 5px;
   overflow: hidden;
 }
-.testimonail-section .testi-slider-container {
+.achievement-section .testi-slider-container {
   display: flex;
   transition: margin 0.3s ease;
   align-items: center;
 }
 
-.testimonail-section .testi-item {
-  padding: 30px;
+.achievement-section .testi-item {
+  padding: 5px;
   text-align: center;
   position: relative;
 }
 
-.testimonail-section .testi-item i {
+.achievement-section .testi-item i {
   position: absolute;
   font-size: 30px;
   color: var(--text-black-600);
   opacity: 0.1;
 }
 
-.testimonail-section .testi-item i.left {
+.achievement-section .testi-item i.left {
   left: 5px;
   top: 5px;
 }
 
-.testimonail-section .testi-item i.right {
+.achievement-section .testi-item i.right {
   right: 5px;
   bottom: 5px;
 }
 
-.testimonail-section .testi-item p {
+.achievement-section .testi-item p {
   font-size: 16px;
   line-height: 26px;
   color: var(--text-black-600);
-  margin: 0 0 30px;
+  margin: 0 0 10px;
 }
 
-.testimonail-section .testi-item img {
-  max-width: 100px;
+.achievement-section .testi-item img {
+  max-width: 400px;
   display: inline-block;
   width: 100%;
 }
 
-.testimonail-section .testi-item span {
+.achievement-section .testi-item span {
   display: block;
-  margin: 10px 0 0;
+  margin: 12px 0 0;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--text-black-700);
   text-transform: capitalize;
 }
 
-.testimonail-section .testi-slider-nav {
+.achievement-section .testi-slider-nav {
   margin: 30px;
   text-align: center;
 }
 
-.testimonail-section .testi-slider-nav span {
+.achievement-section .testi-slider-nav span {
   height: 40px;
   width: 40px;
   color: var(--skin-color);
@@ -1448,11 +1448,11 @@ testimonail section
   margin: 0 40px;
 }
 
-.testimonail-section .testi-slider-nav span:after {
+.achievement-section .testi-slider-nav span:after {
   border-radius: 50%;
 }
 
-.testimonail-section .testi-slider-nav span i {
+.achievement-section .testi-slider-nav span i {
   line-height: 40px;
 }
 
