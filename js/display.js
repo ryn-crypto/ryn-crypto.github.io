@@ -44,7 +44,7 @@ function loadSkills() {
   skillsContainer.innerHTML = '';
 
   // Ambil data JSON menggunakan fetch
-  fetch('./js/data/skill.json')
+  fetch('./js/data/skill.json', { mode: 'no-cors' })
     .then(response => response.json())
     .then(data => {
       // Iterasi melalui setiap objek dalam data JSON
@@ -226,6 +226,5 @@ window.onload = function () {
   loadExperience();
   loadSkills();
   loadEducation();
-  // loadAchievements();
   startTypingEffect();
 };
