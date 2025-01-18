@@ -1,16 +1,22 @@
-{
-  "achievements": [
-    {
-      "name": "Bp. Sandika Galih",
-      "image": "img/achievement/pa_dika.png"
-    },
-    {
-      "name": "Kang Pukis",
-      "image": "img/achievement/pukis.png"
-    },
-    {
-      "name": "Dea Afrizal",
-      "image": "img/achievement/dea.jpg"
-    }
-  ]
-}
+[
+  {
+    "image": "img/achievement/bangkit.png",
+    "title": "Bangkit Academy",
+    "description": "Fully Graduate"
+  },
+  {
+    "image": "img/achievement/analysi.jpeg",
+    "title": "Program Analys",
+    "description": "Certified by BNSP"
+  },
+  {
+    "image": "img/achievement/mongo.png",
+    "title": "Mongo DB Pemula",
+    "description": "Codepolitan certified"
+  },
+  {
+    "image": "img/achievement/ml_dasar.png",
+    "title": "Machine Learning Pemula",
+    "description": "Certified by Dicoding"
+  }
+]

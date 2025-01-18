@@ -16,9 +16,14 @@
       "icon_hover": "img/skill/php.png"
     },
     {
-      "name": "Compose",
-      "icon": "img/skill/jetpack_idle.png",
-      "icon_hover": "img/skill/jetpack.png"
+      "name": "Flutter",
+      "icon": "img/skill/flutter_idle.png",
+      "icon_hover": "img/skill/flutter.png"
+    },
+    {
+      "name": "MYSQL",
+      "icon": "img/skill/sql_idle.png",
+      "icon_hover": "img/skill/sql.png"
     },
     {
       "name": "SQLite",
@@ -31,24 +36,19 @@
       "icon_hover": "img/skill/firebase.png"
     },
     {
-      "name": "MYSQL",
-      "icon": "img/skill/sql_idle.png",
-      "icon_hover": "img/skill/sql.png"
+      "name": "Android Studio",
+      "icon": "img/skill/adstd_idle.png",
+      "icon_hover": "img/skill/adstd.png"
     },
     {
-      "name": "Android Studio",
-      "icon": "img/skill/androidstudio_idle.png",
-      "icon_hover": "img/skill/androidstudio.png"
+      "name": "Compose",
+      "icon": "img/skill/jetpack_idle.png",
+      "icon_hover": "img/skill/jetpack.png"
     },
     {
       "name": "NodeJS",
-      "icon": "img/skill/nodejs_idle.png",
-      "icon_hover": "img/skill/nodejs.png"
-    },
-    {
-      "name": "Flutter",
-      "icon": "img/skill/flutter_idle.png",
-      "icon_hover": "img/skill/flutter.png"
+      "icon": "img/skill/node_idle.png",
+      "icon_hover": "img/skill/node.png"
     }
   ]
 }
