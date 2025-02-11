@@ -2,53 +2,43 @@
   "skillsData": [
     {
       "name": "Kotlin",
-      "icon": "img/skill/kotlin_idle.png",
-      "icon_hover": "img/skill/kotlin.png"
+      "icon": "img/skill/kotlin.png"
     },
     {
       "name": "Javascript",
-      "icon": "img/skill/javascript_idle.png",
-      "icon_hover": "img/skill/javascript.png"
+      "icon": "img/skill/javascript.png"
     },
     {
       "name": "PHP",
-      "icon": "img/skill/php_idle.png",
-      "icon_hover": "img/skill/php.png"
+      "icon": "img/skill/php.png"
     },
     {
       "name": "Flutter",
-      "icon": "img/skill/flutter_idle.png",
-      "icon_hover": "img/skill/flutter.png"
+      "icon": "img/skill/flutter.png"
     },
     {
       "name": "MYSQL",
-      "icon": "img/skill/sql_idle.png",
-      "icon_hover": "img/skill/sql.png"
+      "icon": "img/skill/sql.png"
     },
     {
       "name": "SQLite",
-      "icon": "img/skill/sqlite_idle.png",
-      "icon_hover": "img/skill/sqlite.png"
+      "icon": "img/skill/sqlite.png"
     },
     {
       "name": "Firebase",
-      "icon": "img/skill/firebase_idle.png",
-      "icon_hover": "img/skill/firebase.png"
+      "icon": "img/skill/firebase.png"
     },
     {
       "name": "Android Studio",
-      "icon": "img/skill/adstd_idle.png",
-      "icon_hover": "img/skill/adstd.png"
+      "icon": "img/skill/adstd.png"
     },
     {
       "name": "Compose",
-      "icon": "img/skill/jetpack_idle.png",
-      "icon_hover": "img/skill/jetpack.png"
+      "icon": "img/skill/jetpack.png"
     },
     {
       "name": "NodeJS",
-      "icon": "img/skill/node_idle.png",
-      "icon_hover": "img/skill/node.png"
+      "icon": "img/skill/node.png"
     }
   ]
 }

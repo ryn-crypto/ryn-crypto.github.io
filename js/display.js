@@ -44,7 +44,7 @@ function loadSkills() {
   skillsContainer.innerHTML = '';
 
   // Ambil data JSON menggunakan fetch
-  fetch('./js/data/skill.json', { mode: 'no-cors' })
+  fetch('./js/data/skill.json')
     .then(response => response.json())
     .then(data => {
       // Iterasi melalui setiap objek dalam data JSON
@@ -59,18 +59,9 @@ function loadSkills() {
         var img = document.createElement('img');
         img.src = skill.icon;
         img.alt = skill.name;
-        img.dataset.hoverSrc = skill.icon_hover; // Tambahkan atribut data untuk menyimpan URL gambar saat hover
+
         var h3 = document.createElement('h3');
         h3.textContent = skill.name;
-
-        // Tambahkan event listener untuk hover
-        skillItem.addEventListener('mouseenter', function () {
-          img.src = img.dataset.hoverSrc; // Mengubah sumber gambar saat mouse masuk
-        });
-
-        skillItem.addEventListener('mouseleave', function () {
-          img.src = skill.icon; // Mengembalikan sumber gambar ke aslinya saat mouse meninggalkan
-        });
 
         // Susun elemen-elemen HTML
         icon.appendChild(img);

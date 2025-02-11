@@ -93,14 +93,12 @@
 	})
 })();
 
-
+// hide togle while scrolling
 function bodyscrollingToggle() {
 	document.body.classList.toggle("hidden-scrolling");
 }
 
 //  Portfolio filter and popup
-
-
 (() => {
 
 	const filterContainer = document.querySelector(".portfolio-filter"),
@@ -304,15 +302,15 @@ function bodyscrollingToggle() {
 
 // hide all section exept active
 
-(() => {
-	const section = document.querySelectorAll(".section");
-	section.forEach((section) => {
-		if (!section.classList.contains("active")) {
-			section.classList.add("hide");
-		}
-	})
+// (() => {
+// 	const section = document.querySelectorAll(".section");
+// 	section.forEach((section) => {
+// 		if (!section.classList.contains("active")) {
+// 			section.classList.add("hide");
+// 		}
+// 	})
 
-})();
+// })();
 
 // save change color or mode (dark or light)
 
@@ -323,3 +321,29 @@ window.addEventListener("load", () => {
 		document.querySelector(".preloader").style.display = "none";
 	}, 600)
 })
+
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+	event.preventDefault(); // Mencegah form mengirim data secara default
+
+	// Ambil nilai input
+	let name = document.querySelector("input[name='name']").value;
+	let email = document.querySelector("input[name='email']").value;
+	let subject = document.querySelector("input[name='subject']").value;
+	let message = document.querySelector("textarea[name='message']").value;
+
+	// Validasi sederhana
+	if (!name || !email || !subject || !message) {
+		console.log(name, email, subject, message);
+		alert("Harap isi semua kolom!");
+		return;
+	}
+
+	// Format isi email
+	let body = `${message}`;
+
+	// Buat link mailto
+	let mailtoLink = `mailto:riyandotianto2@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+	// Buka aplikasi email pengguna
+	window.location.href = mailtoLink;
+});

@@ -63,7 +63,7 @@ Feel free to fork this repository, suggest improvements, or report issues. Any f
 
 ## 📧 Contact Me
 
-- **Email:** [Riyan@](mailto:riyandotianto2@gmail.com)
+- **Email:** [Riyan](mailto:riyandotianto2@gmail.com)
 - **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/riyan-first-tiyanto-aa5a4b168/)
 - **GitHub:** [@ryn-crypto](https://github.com/ryn-crypto)
 
