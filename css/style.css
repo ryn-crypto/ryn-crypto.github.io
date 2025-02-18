@@ -715,13 +715,13 @@ about section
 }
 
 .about-section .skills {
-  padding: 0 0 40px;
+  padding: 0 40px;
 }
 
 .about-section .skills .skill-item {
   flex: 0 0 20%;
-  max-width: 50%;
-  padding: 0 5px;
+  max-width: 20%;
+  padding: 0 10px;
   margin-bottom: 30px;
   border-radius: 30%;
   display: flex;
@@ -729,8 +729,8 @@ about section
 }
 
 .about-section .skills .skill-item .icon {
-  height: 90px;
-  width: 90px;
+  max-height: 90px;
+  max-width: 90px;
   text-align: center;
   border-radius: 50%;
   transition: all 0.3s ease;
@@ -741,10 +741,14 @@ about section
 }
 
 .about-section .skills .skill-item .icon img {
-  transition: all 0.3s ease;
+  filter: grayscale(100%);
   overflow: hidden;
   border-radius: 50%;
   transition: all 0.3s ease;
+}
+
+.about-section .skills .skill-item:hover .icon img {
+  filter: grayscale(0%);
 }
 
 .about-section .skill-item-inner {
