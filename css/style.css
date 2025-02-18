@@ -496,6 +496,10 @@ navbar
   justify-content: center;
 }
 
+.nav-menu-inner .logo {
+  display: none;
+}
+
 .nav-menu ul {
   padding: 15px;
 }
@@ -1369,7 +1373,7 @@ testimonail section
 ----------------------*/
 
 .achievement-section {
-  padding: 50px 0 50px;
+  padding: 80px;
   min-height: 100vh;
 }
 
@@ -1550,4 +1554,119 @@ contact section
   max-width: 100%;
   text-align: right;
   padding: 0 15px;
+}
+
+.style-switcher .language {
+  display: none;
+}
+
+/* Tab */
+@media (min-width: 768px) {
+  .effect-3 {
+    left: 10%;
+    top: -10px;
+  }
+
+  .effect-4 {
+    left: 45%;
+    top: 20%;
+  }
+
+  .section.hide {
+    display: block;
+  }
+
+  .copyright-text,
+  .nav-menu .close-nav-menu,
+  .container .hamburger-btn {
+    display: none;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .nav-menu {
+    position: fixed;
+    background-color: var(--bg-black-50);
+    left: 0;
+    top: 0;
+    height: 85px;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    z-index: 9;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu.scrolled {
+    height: 90px;
+    box-shadow: var(--outer-shadow);
+  }
+
+  .nav-menu-inner {
+    display: flex;
+    min-height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-menu-inner .logo {
+    display: block;
+  }
+
+  .nav-menu-inner .logo a {
+    display: inline-block;
+    text-align: center;
+    line-height: 36px;
+    height: 40px;
+    width: 40px;
+    font-size: 24px;
+    color: var(--skin-color);
+    border-radius: 50%;
+    border: 2px solid var(--skin-color);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    padding: 0;
+  }
+
+  .nav-menu ul li {
+    margin: 0 5px;
+    display: inline-block;
+  }
+
+  .nav-menu ul li a {
+    display: flex;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.5s ease;
+  }
+
+  .nav-menu ul li a:hover {
+    color: var(--skin-color);
+  }
+
+  .style-switcher .language {
+    display: block;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .nav-menu-inner {
+    justify-content: space-evenly;
+  }
+
+  .nav-menu ul li {
+    margin: 0 15px;
+    display: inline-block;
+  }
 }
