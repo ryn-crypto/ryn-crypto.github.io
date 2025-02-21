@@ -1,7 +1,6 @@
 // navigation menu
 
 (() => {
-
 	const hamburgerBtn = document.querySelector(".hamburger-btn"),
 		navMenu = document.querySelector(".nav-menu"),
 		closeNavBtn = navMenu.querySelector(".close-nav-menu");
@@ -19,55 +18,116 @@
 		fadeOutEffect();
 		bodyscrollingToggle();
 	}
+
 	function fadeOutEffect() {
 		document.querySelector(".fade-out-effect").classList.add("active");
 		setTimeout(() => {
 			document.querySelector(".fade-out-effect").classList.remove("active");
-		}, 300)
+		}, 300);
 	}
 
-	// attach an event handler to document
+	// Event listener untuk smooth scroll pada klik menu
+	// Fungsi untuk memperbarui status menu navigasi
+	function updateNavMenuState(targetItem) {
+		const activeNav = navMenu.querySelector(".active");
+		if (activeNav) {
+			activeNav.classList.remove("active", "inner-shadow");
+			activeNav.classList.add("outer-shadow", "hover-in-shadow");
+		}
+
+		targetItem.classList.remove("outer-shadow", "hover-in-shadow");
+		targetItem.classList.add("active", "inner-shadow");
+	}
+
+	// Fungsi untuk mengganti URL tanpa memicu loncatan halaman
+	function updateURL(hash) {
+		history.pushState(null, null, hash);
+	}
+
+	// Fungsi untuk menampilkan section yang aktif
+	function activateSection(targetSection) {
+		// Menyembunyikan section yang aktif sebelumnya
+		const activeSection = document.querySelector(".section.active");
+		if (activeSection) {
+			activeSection.classList.add("hide");
+			activeSection.classList.remove("active");
+		}
+
+		// Menampilkan section yang baru
+		targetSection.classList.add("active");
+		targetSection.classList.remove("hide");
+	}
+
+	// Fungsi untuk melakukan scroll dengan efek smooth
+	function smoothScrollTo(targetSection) {
+		window.scrollTo({
+			top: targetSection.offsetTop - 70, // Menyesuaikan posisi scroll
+			behavior: "smooth",
+		});
+	}
+
+	// Event listener untuk klik pada link navigasi
 	document.addEventListener("click", (event) => {
 		if (event.target.classList.contains("link-item")) {
-			// make sure event.target.hash a value before overidding default behavior
 			if (event.target.hash !== "") {
-				// prevent default anchor click behavior
 				event.preventDefault();
 				const hash = event.target.hash;
-				// deactivate existing active 'section'
-				document.querySelector(".section.active").classList.add("hide");
-				document.querySelector(".section.active").classList.remove("active");
-				// activate new 'section'
-				document.querySelector(hash).classList.add("active");
-				document.querySelector(hash).classList.remove("hide");
-				// deactivate existing active navigation menu 'link-item'
-				navMenu.querySelector(".active").classList.add("outer-shadow", "hover-in-shadow");
-				navMenu.querySelector(".active").classList.remove("active", "inner-shadow");
-				// if clicked "link-item is contained within the navigation menu" 
-				if (navMenu.classList.contains("open")) {
-					// activate new navigation menu 'link-item'
-					event.target.classList.add("active", "inner-shadow");
-					event.target.classList.remove("outer-shadow", "hover-in-shadow");
-					// hide navigation menu
-					hideNavMenu();
+				const targetSection = document.querySelector(hash);
+
+				if (targetSection) {
+					// Update menu navigasi
+					updateNavMenuState(event.target);
+
+					// Jika menu navigasi terbuka, sembunyikan dan tampilkan section yang sesuai
+					if (navMenu.classList.contains("open")) {
+						fadeOutEffect();
+						activateSection(targetSection);
+						hideNavMenu();
+					} else {
+						// Lakukan scroll ke section tanpa efek tambahan
+						smoothScrollTo(targetSection);
+					}
 				}
-				else {
-					let navItem = navMenu.querySelectorAll(".link-item");
-					navItem.forEach((item) => {
-						if (hash === item.hash) {
-							// active new navigation menu 'link-item'
-							item.classList.add("active", "inner-shadow");
-							item.classList.remove("outer-shadow", "hover-in-shadow");
-						}
-					})
-					fadeOutEffect();
-				}
-				// ad hash (#) to url
-				window.location.hash = hash;
 			}
 		}
-	})
+		if (window.innerWidth < 768) {
+			if (event.target.classList.contains("link-item") && event.target.hash === "#about") {
+				event.preventDefault();
+				const targetSection = document.querySelector("#about");
 
+				if (targetSection) {
+					fadeOutEffect();
+					activateSection(targetSection);
+				}
+			}
+		}
+	});
+
+	// Event listener untuk scroll
+	window.addEventListener("scroll", () => {
+		let sections = document.querySelectorAll(".section");
+		let navItems = navMenu.querySelectorAll(".link-item");
+
+		sections.forEach((section) => {
+			const sectionTop = section.offsetTop - 200;  // Mengurangi 200px dari top
+			const sectionBottom = sectionTop + section.offsetHeight;
+
+			if (window.scrollY >= sectionTop && window.scrollY <= sectionBottom) {
+				// Update menu navigasi untuk menandai section yang aktif
+				navItems.forEach((item) => {
+					if (item.hash === `#${section.id}`) {
+						updateNavMenuState(item); // Update status navigasi
+
+						// Ganti URL dengan hash section yang aktif
+						updateURL(`#${section.id}`);
+					} else {
+						item.classList.remove("active", "inner-shadow");
+						item.classList.add("outer-shadow", "hover-in-shadow");
+					}
+				});
+			}
+		});
+	});
 })();
 
 // About Section Tabs

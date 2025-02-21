@@ -73,3 +73,42 @@ function updateIcon() {
     dayNight.querySelector("i").classList.add("fa-moon");
   }
 }
+
+
+// ------------------- language mode ---------------
+
+const language = document.querySelector(".language");
+
+language.addEventListener("click", () => {
+  document.body.classList.toggle("in");
+  if (document.body.classList.contains("in")) {
+    localStorage.setItem("language", "in");
+  } else {
+    localStorage.setItem("language", "en");
+  }
+  updateIconLang();
+});
+
+function languageMode() {
+  // cheking if 'language' key exists
+  if (localStorage.getItem("language") !== null) {
+    if (localStorage.getItem("language") === "in") {
+      document.body.classList.remove("en");
+    } else {
+      document.body.classList.add("en");
+    }
+  }
+  updateIconLang();
+}
+languageMode();
+
+function updateIconLang() {
+  const icon = language.querySelector("i");
+
+  if (document.body.classList.contains("in")) {
+    icon.textContent = "in";
+  } else {
+    icon.textContent = "en";
+  }
+}
+

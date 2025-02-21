@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".nav-menu");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+});
+
+
 // typing animation
 const texts = ["Program Analis", "Tech Enthusiast", "Android Developer", "Web Developer"];
 const typingSpeed = 100;
