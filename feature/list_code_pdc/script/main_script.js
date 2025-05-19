@@ -136,7 +136,7 @@ function renderFilteredCards() {
       `;
 
       card.addEventListener("click", () => {
-        const url = new URL("detail.html", window.location.origin);
+        const url = new URL("https://ryn-crypto.github.io/feature/list_code_pdc/detail.html", window.location.origin);
         url.searchParams.set("model", model);
         url.searchParams.set("lokasi", lokasi);
         url.searchParams.set("batch", batch);
@@ -148,51 +148,6 @@ function renderFilteredCards() {
     }
   }
 }
-
-// function renderFilteredCards() {
-//   const container = document.getElementById("cardContainer");
-//   container.innerHTML = "";
-
-//   for (const lokasi in allData) {
-//     const lokasiData = allData[lokasi];
-//     const batch = lokasiData.batchNumber || "";
-
-//     // Filter berdasarkan PDC
-//     if (selectedPDC && lokasi !== selectedPDC) continue;
-
-//     for (const model in lokasiData) {
-//       if (model === "batchNumber") continue;
-
-//       // Filter berdasarkan brand
-//       if (selectedBrand && model !== selectedBrand) continue;
-
-//       const col = document.createElement("div");
-//       col.className = "col-xl-4 col-lg-6 mb-3";
-
-//       const card = document.createElement("div");
-//       card.className = "card card-contain shadow-sm h-100";
-//       card.style.cursor = "pointer";
-//       card.innerHTML = `
-//         <div class="card-body">
-//           <h5 class="card-title mb-1">${model}</h5>
-//           <h6 class="card-subtitle mb-3">${lokasi}</h6>
-//           <p class="card-text">${batch}</p>
-//         </div>
-//       `;
-
-//       card.addEventListener("click", () => {
-//         const url = new URL("detail.html", window.location.origin);
-//         url.searchParams.set("model", model);
-//         url.searchParams.set("lokasi", lokasi);
-//         url.searchParams.set("batch", batch);
-//         window.location.href = url.toString();
-//       });
-
-//       col.appendChild(card);
-//       container.appendChild(col);
-//     }
-//   }
-// }
 
 function setupSearch(inputId, dropdownId, dataList, onSelect) {
   const input = document.getElementById(inputId);

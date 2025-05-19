@@ -18,7 +18,7 @@ const loadingIndicator = document.getElementById('loadingIndicator');
 
     // Redirect ke add_data.html dengan membawa status 'success'
     setTimeout(() => {
-      const url = `add_data.html?status=success&message=${encodeURIComponent('Data berhasil disimpan!')}`;
+      const url = `https://ryn-crypto.github.io/feature/list_code_pdc/add_data.html?status=success&message=${encodeURIComponent('Data berhasil disimpan!')}`;
       window.location.href = url;
     }, 2000);
   } catch (error) {
@@ -27,7 +27,7 @@ const loadingIndicator = document.getElementById('loadingIndicator');
 
     // Redirect ke add_data.html dengan membawa status 'error'
     setTimeout(() => {
-      const url = `add_data.html?status=error&message=${encodeURIComponent('Gagal menyimpan data. Silakan coba lagi!')}`;
+      const url = `https://ryn-crypto.github.io/feature/list_code_pdc/add_data.html?status=error&message=${encodeURIComponent('Gagal menyimpan data. Silakan coba lagi!')}`;
       window.location.href = url;
     }, 2000);
   }
