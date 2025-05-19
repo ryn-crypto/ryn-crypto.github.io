@@ -1,0 +1,1028 @@
+{
+  "TOYOTA SUNTER": {
+    "batchNumber": "set 35",
+    "NEW AVANZA LLUMAR OEM BLACK": {
+      "describe": "SET LLUMAR OEM NEW AVANZA SUNTER",
+      "code": [
+        "TNALO6J-SDBL-",
+        "TNALO6J-STBL-",
+        "TNALO6J-KMBL-",
+        "TNALO6J-FBBL-"
+      ]
+    },
+    "AVANZA T (JKI)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "YARIS (Platinum)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "RUSH CPF": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "RUSH SM": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW RUSH": {
+      "describe": "SET",
+      "code": ["TRULO6J-SDBL-", "TRULO6J-STBL-", "TRULO6J-FBBL-1"]
+    },
+    "LIMO": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "AGYA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "INNOVA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW INNOVA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ETIOS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "CAMRY": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "COROLLA ALTIS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "Full Depan Rush": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "TOYOTA SUNTER MARUNDA": {
+    "batchNumber": "set 35",
+    "NEW AVANZA LLUMAR OEM BLACK DXX-60": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW RUSH": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "LEXUS": {
+    "batchNumber": "set 35",
+    "LEXUS LM": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LEXUS RX": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LEXUS NX": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LEXUS RZ": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LEXUS LX": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LEXUS ES": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LEXUS LC": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LEXUS UX": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LEXUS LBX": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LEXUS LS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "TOYOTA CIBITUNG": {
+    "batchNumber": "set 35",
+    "COROLLA ALTIS SUPER BLACK": {
+      "describe": "SET COROLA ALTIS TOYOTA CIBITUNG",
+      "code": [
+        "TATBM6J-SDBR-",
+        "TATBM6J-STBR-",
+        "TATBM6J-FBBR-1",
+        "TATSY2J-FFCL-1"
+      ]
+    },
+    "CAMRY SUPER BLACK": {
+      "describe": "SET CAMRY SUPER BLACK CIBITUNG",
+      "code": ["TCRSB6J-SDBR", "TCRSB6J-STBR", "TCRSB6J-FBBR", "TCRSY2J-FFCL"]
+    },
+    "HILUX SINGLE": {
+      "describe": "SET HILUX SINGLE CPF TYT CIBITUNG",
+      "code": ["THSCS6J-SDBR-", "THSCS6J-FBBR-1", "THSCS6J-FABR-1"]
+    },
+    "HILUX RANGGA": {
+      "describe": "SET  NEW HILUX RANGGA TX CIBITUNG",
+      "code": ["THRGC6J-SDBR", "THRGC6J-FBBR", "THRGC6J-FABR"]
+    },
+    "HILUX DOUBLE": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HIACE STANDAR": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HIACE LUXURY": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "VOXY LLUMAR SUPER BLACK 60": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "C-HR LLUMAR SUPER BLACK 60": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "C-HR FULL DEPAN TOP 70": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HIACE PREMIO": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "SUPRA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "PRIUS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "COROLLA CROSS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "COROLLA CROSS SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "YARIS GR STRATOS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "CENTURY": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW VIOS DYN MAX 20": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "BZ4X": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "RAV4": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "GR COROLLA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LAND CRUISER": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "TOYOTA CIBITUNG MARUNDA": {
+    "batchNumber": "set 35",
+    "HILUX SINGLE": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HILUX RANGGA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HIACE STANDAR": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HIACE PREMIO": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "CAMRY SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ALTIS SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "VOXY SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "COROLLA CROSS SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "CHR SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "YARIS GR SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "GR COROLLA SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LAND CRUISER SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "BZ4X SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "GR 86 SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ALPHARD SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "VIOS DYN MAX 20": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "TOYOTA KARAWANG": {
+    "batchNumber": "set 35",
+    "INNOVA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW INNOVA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW INNOVA ZENIX": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "SIENTA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "CALYA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "AGYA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW YARIS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "YARIS CROSS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "VIOS DYN MAX 20": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW RUSH": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "RAIZE": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW AVANZA VELOZ LLUMAR OEM": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW FORTUNER": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW FORTUNER STRATOS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "TOYOTA KARAWANG MARUNDA": {
+    "batchNumber": "set 35",
+    "INNOVA LLUMAR AF 20": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW INNOVA ZENIX": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "SIENTA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "CALYA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FD.AF 50": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FD.AF 50 NEW INNOVA ZENIX": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "AGYA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW YARIS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "YARIS CROSS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "VIOS DYN MAX 20": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FD.RAIZE BFC 40": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW RUSH": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FORTUNER": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "RAIZE": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW AVANZA VELOZ LLUMAR OEM": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "PDK UNGU": {
+    "batchNumber": "set 35",
+    "ISUZU (JKI)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ISUZU (ELF-MAGELANG)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "D-MAX (LONG)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "D-MAX (LONG) IAMI CPF1 + FD SCURITY": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "D-MAX (SHORT)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ISUZU (VB)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "MU-X I.A.M.I + FULL DEPAN CPF1 SCURITY": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "D-MAX IAMI (LONG)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "MU-X I.A.M.I": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "PDC CHERY": {
+    "batchNumber": "set 35",
+    "TIGGO7": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "TIGGO8": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "TIGGO8 pro max": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "PDC NETA": {
+    "batchNumber": "set 35",
+    "NETA V-II": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "PDC JETOUR": {
+    "batchNumber": "set 35",
+    "X70 PLUS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "DASHING": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "PDC WULING": {
+    "batchNumber": "set 35",
+    "ALMAZ": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ALVES": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "PDC GWM DAWUAN": {
+    "batchNumber": "set 35",
+    "TANK 500": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "TANK 300": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HAVAL": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HAVAL JOLION": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "ISUZU KARAWANG TIMUR": {
+    "batchNumber": "set 35",
+    "GIGA FD SCURITY": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ELF FD SCURITY": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "ISUZU KARAWANG BARAT": {
+    "batchNumber": "set 35",
+    "MU-X (4X2)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ALL NEW D-MAX (LONG)/RODEO/PINDAD": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ALL NEW D-MAX (SINGLE)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ALL NEW mu-X (4X4)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "DAIHATSU SUNTER": {
+    "batchNumber": "set 35",
+    "XENIA TITANIUM PAKET BARU SKKB (TYPE X)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "XENIA TITANIUM PAKET BARU SKKB (TYPE M)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "XENIA TITANIUM PAKET LAMA SKKB (TYPE R)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "XENIA CUSTOM": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW XENIA CIR 60 PAKET BARU SKKB (LAMA)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "XENIA CIR RX 60 SKKB + FD (Paket Baru)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "XENIA BLACK XN 60   SKKB + FD (Paket Baru)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW XENIA PPF SPEEDOMETER": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ROCKY": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "SIGRA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW SIGRA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "SIGRA FD": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LUXIO FD": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "XENIA FD": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW  XENIA SHIELD FD": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW SIRION TITANIUM SKKB": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW SIRION TITANIUM FD": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "XENIA STANDART SKKB": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LUXIO SKKB": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "GRANDMAX SKKB": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "SIRION STANDART SKKB": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "AYLA SKKB": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW AYLA CPF1 BLACK XC 60 SKKB + FD (Paket Baru)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW AYLA PPF SPEEDOMETER": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW AYLA PPF REAR": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "Copen": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "TERIOS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "TERIOS  TITANIUM (Paket Lama)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "TERIOS  TITANIUM (Paket Penambahan)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ALL NEW TERIOS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FULL DEPAN NEW TERIOS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW TERIOS PPF SPEEDOMETER": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "TERIOS CUSTOM": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "Full Dpn Terios": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "DAIHATSU SUNTER (BATAM)": {
+    "batchNumber": "set 35",
+    "XENIA TITANIUM PAKET BARU SKKB (TYPE X)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "XENIA TITANIUM PAKET BARU SKKB (TYPE M)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "XENIA TITANIUM PAKET LAMA SKKB (TYPE R)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "XENIA CUSTOM": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW XENIA CIR 60 PAKET BARU SKKB": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "XENIA CIR RX 60 SKKB + FD (Paket Baru)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "XENIA BLACK XN 60   SKKB + FD (Paket Baru)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW XENIA PPF SPEEDOMETER": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ROCKY": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "SIGRA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW SIGRA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "SIGRA FD": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LUXIO FD": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "XENIA FD": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW  XENIA SHIELD FD": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW SIRION TITANIUM SKKB": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW SIRION TITANIUM FD": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "XENIA STANDART SKKB": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LUXIO SKKB": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "GRANDMAX SKKB": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "SIRION STANDART SKKB": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "AYLA SKKB": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW AYLA CPF1 BLACK XC 60 SKKB + FD (Paket Baru)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW AYLA PPF SPEEDOMETER": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW AYLA PPF REAR": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "Copen": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "TERIOS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "TERIOS  TITANIUM (Paket Lama)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "TERIOS  TITANIUM (Paket Penambahan)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW TERIOS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FULL DEPAN NEW TERIOS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW TERIOS PPF SPEEDOMETER": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "TERIOS CUSTOM": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "Full Dpn Terios": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "PDC HASRAD": {
+    "batchNumber": "set 35",
+    "AVANZA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "RUSH": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW RUSH": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HI-LUX.S": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HI-LUX DX": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HILUX .EX": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ETIOS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FD sparta 40%": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FD.AVANZA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FD.RUSH": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "AGYA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "CALYA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HIACE": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FD.RAIZE BFC 40": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "RAIZE": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "COROLLA CROSS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "YARIS CROSS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FD ZENIX.AF 50": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FD VENTURER.AF 50": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW INNOVA  ZENIX": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "INNOVA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "PDC DAWUAN": {
+    "batchNumber": "set 35",
+    "DYNA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  },
+  "PDC BATAM": {
+    "batchNumber": "set 35",
+    "AVANZA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "RUSH": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW RUSH AF 20": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "INNOVA LLUMAR AF 20": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "NEW INNOVA  ZENIX": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "Full Depan Innova LLumar AF 50": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FD ZENIX.AF 50": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HILUX  SINGLE .C": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HILUX RANGGA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ALPHARD SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "AGYA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HIACE": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "HIACE AG SUNBLOCK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FORTUNER": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "YARIS (Standar)": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "YARIS CROSS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "COROLLA CROSS SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "BZ4X SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "LAND CRUISER SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ETIOS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "VIOS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "FD.RAIZE BFC 40": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "RAIZE": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "SIENTA 3M XT 20": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "SIENTA AF 20": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "CALYA": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "CAMRY": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "ALTIS": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    },
+    "VOXY SUPER BLACK": {
+      "describe": "SET",
+      "code": ["-", "-", "-"]
+    }
+  }
+}

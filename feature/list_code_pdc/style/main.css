@@ -1,0 +1,64 @@
+.card-contain {
+  transition: all 0.3s ease-in-out;
+}
+.card-contain:hover {
+  background-color: #d4d6d8;
+  transform: scale(1.03);
+}
+
+.card-contain:hover .card-title,
+.card-contain:hover .card-subtitle,
+.card-contain:hover .card-text {
+  color: #041930;
+}
+
+.sortable-ghost {
+  opacity: 0.5;
+  border: 2px dashed #007bff;
+}
+
+.custom-icon {
+  color: #117430;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-icon:hover {
+  color: #00ff51;
+  transform: scale(1.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* untuk Navbar */
+.nav-item .icon {
+  display: none;
+}
+
+.nav-item .text {
+  text-align: end;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#loadingIndicator {
+  min-height: calc(100vh - 300px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .container .navbar-collapse {
+    display: flex !important;
+    justify-content: end;
+  }
+
+  .nav-item .icon {
+    display: flex;
+  }
+
+  .nav-item .text {
+    display: none;
+  }
+}
