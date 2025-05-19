@@ -277,7 +277,7 @@ function saveForm() {
   // Simpan ke Firestore
   try {
     const pdcName = currentDetail.model;
-    window.location.href = `https://ryn-crypto.github.io/feature/list_code_pdc/save.html?pdcName=${encodeURIComponent(pdcName)}&batch=${encodeURIComponent(batch)}&vehicles=${encodeURIComponent(JSON.stringify(vehicles))}&root=${encodeURIComponent(rootCollection)}`;
+    window.location.href = `save.html?pdcName=${encodeURIComponent(pdcName)}&batch=${encodeURIComponent(batch)}&vehicles=${encodeURIComponent(JSON.stringify(vehicles))}&root=${encodeURIComponent(rootCollection)}`;
 
     showToast("Data berhasil disimpan!");
   } catch (error) {
@@ -289,7 +289,7 @@ function saveForm() {
 
 function cancelForm() {
   // Ask for confirmation before leaving
-  if (confirm("Batalkan perubahan? Data yang belum disimpan akan hilang.")) {
+  if (confirm("Batalkan perubahan? Data yang belum diisi akan hilang.")) {
     // Redirect back to list page
     window.location.href = "https://ryn-crypto.github.io/feature/list_code_pdc/add_data.html";
   }

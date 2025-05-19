@@ -60,46 +60,6 @@ async function loadAndRenderCards() {
   }
 }
 
-// async function loadAndRenderCards() {
-//   try {
-//     const rawData = await getAllJobCostingData();
-//     const data = await response.json();
-//     allData = data;
-
-//     const pdcSet = new Set(Object.keys(data));
-
-//     // Inisialisasi dropdown PDC
-//     setupSearch("searchPDC", "dropdownPDC", [...pdcSet], (value) => {
-//       selectedPDC = value;
-//       selectedBrand = ""; // reset brand saat PDC berubah
-//       document.getElementById("searchBrand").value = "";
-
-//       // Ambil brand dari PDC terpilih
-//       const lokasiData = allData[selectedPDC] || {};
-//       const brandSet = new Set(
-//         Object.keys(lokasiData).filter((key) => key !== "batchNumber")
-//       );
-
-//       // Aktifkan dropdown brand setelah pilih PDC
-//       toggleInput("searchBrand", true);
-
-//       setupSearch("searchBrand", "dropdownBrand", [...brandSet], (val) => {
-//         selectedBrand = val;
-//         renderFilteredCards();
-//       });
-
-//       renderFilteredCards();
-//     });
-
-//     // Nonaktifkan input brand awalnya
-//     toggleInput("searchBrand", false);
-
-//     renderFilteredCards();
-//   } catch (error) {
-//     console.error("Gagal memuat data JSON:", error);
-//   }
-// }
-
 function toggleInput(inputId, enabled) {
   const input = document.getElementById(inputId);
   input.disabled = !enabled;
