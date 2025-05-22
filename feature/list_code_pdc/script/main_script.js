@@ -1,29 +1,126 @@
 import { getAllJobCostingData } from '../firebase/firebase_setup.js';
+import { parseJobCosting1, parseJobCosting2 } from "../helpers/jobCostingParser.js";
 
 let allData = {};
 let selectedPDC = "";
 let selectedBrand = "";
+let currentJobCosting = "Job Costing 1"; // Default value
+let currentJobCostingCode = "JC1";
 
 const loadingIndicator = document.getElementById("loadingIndicator");
 
+// Fungsi untuk menangani klik pada dropdown item
+function setupJobCostingDropdown() {
+  const dropdownItems = document.querySelectorAll('.dropdown-menu .dropdown-item');
+
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      // Ambil teks dari item dropdown yang diklik
+      const jobCostingText = this.textContent.trim();
+
+      // Update teks pada tombol dropdown
+      const dropdownButton = document.querySelector('.dropdown-toggle');
+      if (dropdownButton) {
+        dropdownButton.textContent = jobCostingText;
+      }
+
+      // Tentukan kode berdasarkan teks
+      let jobCostingCode = "";
+      if (jobCostingText === "Job Costing 1") {
+        jobCostingCode = "JC1";
+      } else if (jobCostingText === "Job Costing 2") {
+        jobCostingCode = "JC2";
+      }
+
+      // Update nilai global
+      currentJobCosting = jobCostingText;
+      currentJobCostingCode = jobCostingCode;
+
+      loadAndRenderCards();
+    });
+  });
+}
+
 async function loadAndRenderCards() {
-  console.log("initializing main");
   try {
+    const container = document.getElementById("cardContainer");
+    container.innerHTML = "";
+
     loadingIndicator.style.display = "block";
-    const rawData = await getAllJobCostingData();
+
+    allData = {};
+    selectedPDC = "";
+    selectedBrand = "";
+    document.getElementById("searchPDC").value = "";
+    document.getElementById("searchBrand").value = "";
+
+    // Gunakan loadJobCostingData (sudah otomatis parsing dari helper)
+    const parsedData = await loadJobCostingData(currentJobCosting, currentJobCostingCode);
+
     loadingIndicator.style.display = "none";
-    // Ubah data Firebase ke struktur allData = { [pdcName]: { batchNumber, [brand]: { code } } }
     allData = {};
 
-    for (const entry of rawData) {
-      const { pdcName, batchNumber, vehicles } = entry;
-      allData[pdcName] = { batchNumber };
+    // Ekstrak data dengan mengenali struktur nested array
+    if (Array.isArray(parsedData)) {
+      // Iterasi melalui array utama
+      parsedData.forEach((group, groupIndex) => {
+        // Periksa apakah group adalah array
+        if (Array.isArray(group)) {
+          // Iterasi melalui setiap item dalam group
+          group.forEach((item, itemIndex) => {
+            // Jika item memiliki id, gunakan sebagai kunci
+            if (item && item.id) {
+              const id = item.id;
+              const batchNumber = item.batchNumber || "unknown";
 
-      for (const vehicle of vehicles) {
-        allData[pdcName][vehicle.id] = {
-          code: vehicle.code || ""
-        };
-      }
+              // Jika lokasi belum ada di allData, tambahkan
+              if (!allData[id]) {
+                allData[id] = {
+                  batchNumber: batchNumber
+                };
+              }
+
+              // Jika item memiliki mobil (array mobil), tambahkan setiap mobil sebagai model
+              if (item.mobil && Array.isArray(item.mobil)) {
+                item.mobil.forEach(mobilName => {
+                  // Tambahkan mobil sebagai model dengan properti dasar
+                  allData[id][mobilName] = {
+                    code: item.code || [],
+                    describe: item.describe || []
+                  };
+                });
+              }
+            }
+          });
+        } else if (typeof group === 'object' && group !== null) {
+          // Jika group adalah objek dengan properti numerik (seperti yang terlihat di log)
+          const numericKeys = Object.keys(group).filter(k => !isNaN(parseInt(k)));
+          numericKeys.forEach(key => {
+            const item = group[key];
+            if (item && item.id) {
+              const id = item.id;
+              const batchNumber = item.batchNumber || "unknown";
+
+              if (!allData[id]) {
+                allData[id] = {
+                  batchNumber: batchNumber
+                };
+              }
+
+              if (item.mobil && Array.isArray(item.mobil)) {
+                item.mobil.forEach(mobilName => {
+                  allData[id][mobilName] = {
+                    code: item.code || [],
+                    describe: item.describe || []
+                  };
+                });
+              }
+            }
+          });
+        }
+      });
     }
 
     const pdcSet = new Set(Object.keys(allData));
@@ -34,13 +131,16 @@ async function loadAndRenderCards() {
       selectedBrand = ""; // reset brand saat PDC berubah
       document.getElementById("searchBrand").value = "";
 
-      // Ambil brand dari PDC terpilih
       const lokasiData = allData[selectedPDC] || {};
-      const brandSet = new Set(
-        Object.keys(lokasiData).filter((key) => key !== "batchNumber")
-      );
 
-      // Aktifkan dropdown brand setelah pilih PDC
+      // Kita perlu mengambil brand/mobil dari data yang sudah diolah
+      const brandSet = new Set();
+
+      // Filter properti yang bukan metadata
+      Object.keys(lokasiData)
+        .filter(key => key !== "batchNumber")
+        .forEach(key => brandSet.add(key));
+
       toggleInput("searchBrand", true);
 
       setupSearch("searchBrand", "dropdownBrand", [...brandSet], (val) => {
@@ -51,14 +151,37 @@ async function loadAndRenderCards() {
       renderFilteredCards();
     });
 
-    // Nonaktifkan input brand awalnya
     toggleInput("searchBrand", false);
-
     renderFilteredCards();
   } catch (error) {
     console.error("Gagal memuat data dari Firestore:", error);
+    loadingIndicator.style.display = "none";
   }
 }
+
+
+// Keep your original loadJobCostingData function
+const loadJobCostingData = async (collectionName, structureType) => {
+  try {
+    const rawData = await getAllJobCostingData(collectionName); // ini sudah array of objects
+
+    const parsedData = rawData.map(doc => {
+      if (structureType === "JC1") {
+        return parseJobCosting1(doc);
+      } else if (structureType === "JC2") {
+        return parseJobCosting2(doc);
+      } else {
+        return doc; // fallback
+      }
+    });
+
+    return parsedData;
+  } catch (error) {
+    console.error("Failed to load and parse job costing data:", error);
+    return [];
+  }
+};
+
 
 function toggleInput(inputId, enabled) {
   const input = document.getElementById(inputId);
@@ -71,6 +194,8 @@ function renderFilteredCards() {
   const container = document.getElementById("cardContainer");
   container.innerHTML = "";
 
+  let cardCount = 0;
+
   for (const lokasi in allData) {
     if (selectedPDC && lokasi !== selectedPDC) continue;
 
@@ -81,6 +206,10 @@ function renderFilteredCards() {
       if (model === "batchNumber") continue;
       if (selectedBrand && model !== selectedBrand) continue;
 
+      const modelData = lokasiData[model];
+      const codeData = modelData.code || {};
+      const describeData = modelData.describe || [];
+
       const col = document.createElement("div");
       col.className = "col-xl-4 col-lg-6 mb-3";
 
@@ -89,7 +218,7 @@ function renderFilteredCards() {
       card.style.cursor = "pointer";
       card.innerHTML = `
         <div class="card-body">
-          <h5 class="card-title mb-1">${model}</h5>
+          <h5 class="card-title mb-2">${model}</h5>
           <h6 class="card-subtitle mb-3">${lokasi}</h6>
           <p class="card-text">${batch}</p>
         </div>
@@ -97,15 +226,27 @@ function renderFilteredCards() {
 
       card.addEventListener("click", () => {
         const url = new URL("https://ryn-crypto.github.io/feature/list_code_pdc/detail.html", window.location.origin);
-        url.searchParams.set("model", model);
-        url.searchParams.set("lokasi", lokasi);
-        url.searchParams.set("batch", batch);
+        url.searchParams.set("mobilName", model);
+        url.searchParams.set("pdcName", lokasi);
+        url.searchParams.set("batchNumber", batch);
+        url.searchParams.set("jobCosting", currentJobCosting);
+        url.searchParams.set("codeData", JSON.stringify(codeData));
+        url.searchParams.set("describeData", JSON.stringify(describeData));
         window.location.href = url.toString();
       });
 
       col.appendChild(card);
       container.appendChild(col);
+      cardCount++;
     }
+  }
+
+  // Tampilkan pesan jika tidak ada kartu yang dirender
+  if (cardCount === 0) {
+    const noDataMsg = document.createElement("div");
+    noDataMsg.className = "col-12 text-center py-4";
+    noDataMsg.innerHTML = "<h4>Tidak ada data yang sesuai dengan filter</h4>";
+    container.appendChild(noDataMsg);
   }
 }
 
@@ -182,4 +323,11 @@ function setupSearch(inputId, dropdownId, dataList, onSelect) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", loadAndRenderCards);
+// Inisialisasi saat halaman dimuat
+document.addEventListener("DOMContentLoaded", function () {
+  // Setup dropdown Job Costing
+  setupJobCostingDropdown();
+
+  // Load data dengan nilai default
+  loadAndRenderCards();
+});
