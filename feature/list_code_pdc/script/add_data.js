@@ -2,28 +2,103 @@ const params = new URLSearchParams(window.location.search);
 const status = params.get('status');
 const message = params.get('message');
 
-const pdcSet = new Set([
-  "PDC",
-  "TOYOTA SUNTER",
-  "TOYOTA SUNTER MARUNDA",
-  "LEXUS",
-  "TOYOTA CIBITUNG",
-  "TOYOTA CIBITUNG MARUNDA",
-  "TOYOTA KARAWANG",
-  "TOYOTA KARAWANG MARUNDA",
-  "PDC UNGU",
-  "PDC CINERE",
-  "PDC BETAWI",
-  "PDC CIBUBUR",
-  "PDC GWM HIJAU",
-  "ISUZU KARAWANG TIMUR",
-  "ISUZU KARAWANG BARAT",
-  "DAIHATSU SUNTER",
-  "DAIHATSU SUNTER (BATAM)",
-  "PDC HASRAD",
-  "PDC DAWUAN",
-  "PDC BATAM"
-]);
+const pdcData = [
+  {
+    PDC: "TOYOTA SUNTER",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "TOYOTA SUNTER MARUNDA",
+    batchNumber1: "Job Costing 37",
+    batchNumber2: "Set 37"
+  },
+  {
+    PDC: "LEXUS",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "TOYOTA CIBITUNG",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "TOYOTA CIBITUNG MARUNDA",
+    batchNumber1: "Job Costing 37",
+    batchNumber2: "Set 37"
+  },
+  {
+    PDC: "TOYOTA KARAWANG",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "TOYOTA KARAWANG MARUNDA",
+    batchNumber1: "Job Costing 37",
+    batchNumber2: "Set 37"
+  },
+  {
+    PDC: "PDC UNGU",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "PDC CINERE",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "PDC BETAWI",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "PDC CIBUBUR",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "PDC GWM HIJAU",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "ISUZU KARAWANG TIMUR",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "ISUZU KARAWANG BARAT",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "DAIHATSU SUNTER",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "DAIHATSU SUNTER (BATAM)",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "PDC HASRAD",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "PDC DAWUAN",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  },
+  {
+    PDC: "PDC BATAM",
+    batchNumber1: "Job Costing 35",
+    batchNumber2: "Set 35"
+  }
+];
 
 if (message) {
   const isError = status === 'error';
@@ -52,9 +127,9 @@ document.addEventListener("DOMContentLoaded", function () {
 function renderForm() {
   const content = document.getElementById("detail-content");
   const html = `
-    <div class="card position-relative">
+    <div class="card position-relative mb-5 p-2">
       <div class="card-body">
-        <div class="container bg-primary-subtle p-3 mb-3 mt-3 rounded position-relative">
+        <div class="container bg-body-secondary p-3 mb-3 mt-3 rounded position-relative">
           <h4 class="card-title">Form Detail</h4>
         </div>
 
@@ -175,24 +250,21 @@ function renderJobCostingContent() {
     </button>
     `;
   } else {
-    // Job Costing 2 - Multiple product codes with drag functionality
     return `
       <div class="job-costing-2">
         <label class="form-label"><strong>Kode Produk:</strong></label>
         <div id="codeEditContainer" class="mb-3">
-          ${
-      // Always create 4 empty fields for new data input
-      Array(4).fill().map((_, idx) => `
-              <div class="input-group mb-2" data-idx="${idx}">
-                <span class="input-group-text drag-handle" style="cursor: grab;">
-                  <i class="bi bi-grip-horizontal"></i>
-                </span>
-                <textarea class="form-control code-edit" rows="1" placeholder="Kode produk..."></textarea>
-                <button class="btn btn-outline-danger btn-sm remove-code-btn" type="button" title="Hapus kode" onclick="removeCode(this)">
-                  <i class="bi bi-x"></i>
-                </button>
-              </div>
-            `).join("")
+          ${Array(4).fill().map((_, idx) => `
+          <div class="input-group mb-2" data-idx="${idx}">
+            <span class="input-group-text drag-handle" style="cursor: grab;">
+              <i class="bi bi-grip-horizontal"></i>
+            </span>
+            <input class="form-control code-edit" rows="1" placeholder="Kode produk..."></input>
+            <button class="btn btn-outline-danger btn-sm remove-code-btn" type="button" title="Hapus kode" onclick="removeCode(this)">
+              <i class="bi bi-x"></i>
+            </button>
+          </div>
+        `).join("")
       }
         </div>
         <button class="btn btn-outline-success w-100 mb-3 d-flex align-items-center justify-content-center gap-2" type="button" onclick="addNewCode()">
@@ -464,7 +536,7 @@ function saveForm() {
     // Simpan ke Firestore via save.html
     try {
       const pdcName = currentDetail.model;
-      window.location.href = `save.html?pdcName=${encodeURIComponent(pdcName)}&batch=${encodeURIComponent(batch)}&vehicles=${encodeURIComponent(vehicles)}&root=${encodeURIComponent(rootCollection)}&data=${encodeURIComponent(encodedCodeData)}&describe=${encodeURIComponent(describe)}&describe=${encodeURIComponent(describe)}&gudangCode=${encodeURIComponent(gudangCode)}`;
+      window.location.href = `https://ryn-crypto.github.io/feature/list_code_pdc/save.html?pdcName=${encodeURIComponent(pdcName)}&batch=${encodeURIComponent(batch)}&vehicles=${encodeURIComponent(vehicles)}&root=${encodeURIComponent(rootCollection)}&data=${encodeURIComponent(encodedCodeData)}&describe=${encodeURIComponent(describe)}&describe=${encodeURIComponent(describe)}&gudangCode=${encodeURIComponent(gudangCode)}`;
 
       showToast("Data berhasil disimpan!");
     } catch (error) {
@@ -500,7 +572,7 @@ function saveForm() {
     // Simpan ke Firestore via save.html
     try {
       const pdcName = currentDetail.model;
-      window.location.href = `save.html?pdcName=${encodeURIComponent(pdcName)}&batch=${encodeURIComponent(batch)}&vehicles=${encodeURIComponent(JSON.stringify(vehicles))}&root=${encodeURIComponent(rootCollection)}`;
+      window.location.href = `https://ryn-crypto.github.io/feature/list_code_pdc/save.html?pdcName=${encodeURIComponent(pdcName)}&batch=${encodeURIComponent(batch)}&vehicles=${encodeURIComponent(JSON.stringify(vehicles))}&root=${encodeURIComponent(rootCollection)}`;
 
       showToast("Data berhasil disimpan!");
     } catch (error) {
@@ -570,6 +642,7 @@ function hideToast() {
 
 function setupSearch() {
   const input = document.getElementById("pdcNameInput");
+  const batchType = document.getElementById("jobCostingSelect")
   const suggestionsBox = document.getElementById("pdcSuggestions");
   let activeIndex = -1;
 
@@ -583,9 +656,10 @@ function setupSearch() {
       return;
     }
 
-    const filtered = Array.from(pdcSet).filter(pdc =>
-      pdc.toLowerCase().includes(value)
-    );
+    const filtered = pdcData
+      .filter(item => item.PDC.toLowerCase().includes(value))
+      .map(item => item.PDC);
+
 
     if (filtered.length === 0) {
       suggestionsBox.style.display = "none";
@@ -648,4 +722,30 @@ function setupSearch() {
       activeIndex = -1;
     }
   });
+
+  input.addEventListener('focusout', () => changeBatchNumber(input.value, batchType.value));
+
+  batchType.addEventListener('change', () => changeBatchNumber(input.value, batchType.value));
+}
+
+function changeBatchNumber(pdcName, batchTypeValue) {
+  let jobCostingNumber = "";
+
+  // Cari data PDC di pdcData
+  const found = pdcData.find(item => item.PDC === pdcName);
+  const jcNumber = document.getElementById("batchInput");
+
+  if (found) {
+    if (batchTypeValue === "Job Costing") {
+      jobCostingNumber = found.batchNumber1;
+      jcNumber.value = jobCostingNumber;
+      jcNumber.disabled = true;
+    } else {
+      jobCostingNumber = found.batchNumber2;
+      jcNumber.value = jobCostingNumber;
+      jcNumber.disabled = true;
+    }
+  } else {
+    console.log("PDC tidak ditemukan di data.");
+  }
 }

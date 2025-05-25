@@ -103,26 +103,17 @@ async function processData(pdcName, batch, vehiclesData, parsedData, rootCollect
     else if (rootCollection === 'Job Costing 2') {
       console.log('Processing Job Costing 2 data');
 
-      // PERBAIKAN: Untuk Job Costing 2, vehiclesData sudah berupa array object
-      // Tidak perlu dibungkus lagi dalam array
-      if (Array.isArray(vehiclesData) && vehiclesData.length > 0) {
-        // vehiclesData sudah dalam format yang benar: [{name: "mobil", code: [...], describe: "..."}]
-        preparedData = vehiclesData;
-      } else {
-        // Fallback jika bukan array
-        const vehicleName = typeof vehiclesData === 'string' ? vehiclesData : String(vehiclesData);
-        preparedData = [{
-          name: vehicleName,
-          code: Array.isArray(parsedData) ? parsedData : [],
-          describe: keterangan || ""
-        }];
-      }
+      const codeproduct = Object.values(parsedData);
+      const vehicleName = typeof vehiclesData === 'string' ? vehiclesData : String(vehiclesData);
+      preparedData = [{
+        name: vehicleName,
+        code: codeproduct || [],
+        describe: keterangan || ""
+      }];
     }
     else {
       throw new Error('Jenis Job Costing tidak dikenali');
     }
-
-    console.log('Prepared data:', preparedData);
 
     // PERBAIKAN: Simpan ke Firebase berdasarkan mode dengan semua parameter yang diperlukan
     if (mode === 'edit') {
@@ -135,11 +126,24 @@ async function processData(pdcName, batch, vehiclesData, parsedData, rootCollect
       loadingText.textContent = "Data berhasil disimpan! Mengalihkan...";
     }
 
+    const describeData = [keterangan];
     // Redirect ke add_data.html dengan status success
     setTimeout(() => {
-      const url = `https://ryn-crypto.github.io/feature/list_code_pdc/add_data.html?status=success&message=${encodeURIComponent(`Data berhasil ${mode === 'edit' ? 'diperbarui' : 'disimpan'}!`)}`;
-      window.location.href = url;
+      const message = `Data berhasil ${mode === 'edit' ? 'diperbarui' : 'disimpan'}!`;
+
+      const url = new URL('https://ryn-crypto.github.io/feature/list_code_pdc/detail.html', window.location.origin);
+      url.searchParams.set('status', 'success');
+      url.searchParams.set('message', message);
+      url.searchParams.set('mobilName', vehiclesData);
+      url.searchParams.set('pdcName', pdcName);
+      url.searchParams.set('batchNumber', batch);
+      url.searchParams.set('warehouseCode', kodeGudang);
+      url.searchParams.set('jobCosting', rootCollection);
+      url.searchParams.set("codeData", JSON.stringify(parsedData));
+      url.searchParams.set("describeData", JSON.stringify(describeData));
+      window.location.href = url.toString();
     }, 2000);
+
 
   } catch (error) {
     console.error('Gagal memproses data:', error);

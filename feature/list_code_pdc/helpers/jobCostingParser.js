@@ -11,6 +11,7 @@ export const parseJobCosting1 = (doc) => {
     return idList.map(mobilName => ({
       id: doc.id,
       batchNumber: doc.batchNumber || "",
+      warehouseCode: doc.kodeGudang,
       code: codes,
       describe: [describe],
       mobil: [mobilName],
@@ -31,6 +32,7 @@ export const parseJobCosting2 = (doc) => {
     return idList.map(mobilName => ({
       id: doc.id,
       batchNumber: doc.batchNumber || "",
+      warehouseCode: doc.kodeGudang,
       code: codes,
       describe: [describe],
       mobil: [mobilName],

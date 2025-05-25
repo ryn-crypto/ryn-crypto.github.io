@@ -138,7 +138,7 @@ async function addNewPDC(pdcName, batchNumber, vehicles = [], rootCollection, ko
     return true;
   } catch (error) {
     console.error(`Error saat menambahkan PDC ${pdcName}:`, error);
-    throw error; // Re-throw error untuk penanganan di tempat panggilan
+    throw error;
   }
 }
 
@@ -185,7 +185,6 @@ async function updatePDC(pdcName, batchNumber, vehicles = [], rootCollection, ko
       });
     }
 
-    // PERBAIKAN: Proses setiap kendaraan dengan validasi rootCollection
     for (const vehicle of vehicles) {
       if (!vehicle.name) {
         console.warn('Skipping vehicle without name:', vehicle);
@@ -244,14 +243,4 @@ async function updatePDC(pdcName, batchNumber, vehicles = [], rootCollection, ko
   }
 }
 
-// setelah semua fungsi dideklarasikan
 export { getAllJobCostingData, addNewPDC, updatePDC };
-
-
-// const uploadButton = document.getElementById("uploadButton");
-// if (uploadButton) {
-//   uploadButton.addEventListener("click", async () => {
-//     const data = getAllJobCostingData();
-//     console.log("Data retrieved:", data);
-//   });
-// }

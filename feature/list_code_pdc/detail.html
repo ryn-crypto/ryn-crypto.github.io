@@ -40,25 +40,39 @@
           />
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler collapsed"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-lg-5 mb-2 mb-lg-0">
-            <li class="nav-item">
+          <ul class="navbar-nav ms-auto custom-nav">
+            <li class="nav-item me-3">
               <a
-                class="nav-link icon"
+                class="nav-link"
                 href="https://ryn-crypto.github.io/feature/list_code_pdc/index.html"
-                ><i class="bi bi-house-door-fill fs-3 custom-icon"></i
-              ></a>
+                ><i class="bi bi-house-door me-1"></i>Home</a
+              >
+            </li>
+
+            <li class="nav-item me-3">
               <a
-                class="nav-link text"
-                href="https://ryn-crypto.github.io/feature/list_code_pdc/index.html"
-                >Home</a
+                class="nav-link active"
+                href="https://ryn-crypto.github.io/feature/list_code_pdc/detail.html"
+                ><i class="bi bi-plus-circle me-1"></i>Detail</a
+              >
+            </li>
+
+            <li class="nav-item me-3">
+              <a
+                class="nav-link"
+                href="https://ryn-crypto.github.io/feature/list_code_pdc/add_data.html"
+                ><i class="bi bi-plus-circle me-1"></i>Add data</a
               >
             </li>
           </ul>
@@ -67,7 +81,7 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container mt-3">
+    <div class="container mt-3 mb-5 pb-md-4 pb-1">
       <div id="detailContainer">
         <!-- Konten detail akan diisi oleh detail_script.js -->
       </div>

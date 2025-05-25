@@ -88,7 +88,8 @@ async function loadAndRenderCards() {
                   // Tambahkan mobil sebagai model dengan properti dasar
                   allData[id][mobilName] = {
                     code: item.code || [],
-                    describe: item.describe || []
+                    describe: item.describe || [],
+                    warehouseCode: item.warehouseCode || []
                   };
                 });
               }
@@ -113,7 +114,8 @@ async function loadAndRenderCards() {
                 item.mobil.forEach(mobilName => {
                   allData[id][mobilName] = {
                     code: item.code || [],
-                    describe: item.describe || []
+                    describe: item.describe || [],
+                    warehouseCode: item.warehouseCode || []
                   };
                 });
               }
@@ -163,7 +165,7 @@ async function loadAndRenderCards() {
 // Keep your original loadJobCostingData function
 const loadJobCostingData = async (collectionName, structureType) => {
   try {
-    const rawData = await getAllJobCostingData(collectionName); // ini sudah array of objects
+    const rawData = await getAllJobCostingData(collectionName);
 
     const parsedData = rawData.map(doc => {
       if (structureType === "JC1") {
@@ -209,6 +211,7 @@ function renderFilteredCards() {
       const modelData = lokasiData[model];
       const codeData = modelData.code || {};
       const describeData = modelData.describe || [];
+      const warehouseCode = modelData.warehouseCode || [];
 
       const col = document.createElement("div");
       col.className = "col-xl-4 col-lg-6 mb-3";
@@ -229,6 +232,7 @@ function renderFilteredCards() {
         url.searchParams.set("mobilName", model);
         url.searchParams.set("pdcName", lokasi);
         url.searchParams.set("batchNumber", batch);
+        url.searchParams.set("warehouseCode", warehouseCode);
         url.searchParams.set("jobCosting", currentJobCosting);
         url.searchParams.set("codeData", JSON.stringify(codeData));
         url.searchParams.set("describeData", JSON.stringify(describeData));
@@ -323,11 +327,15 @@ function setupSearch(inputId, dropdownId, dataList, onSelect) {
   }
 }
 
-// Inisialisasi saat halaman dimuat
 document.addEventListener("DOMContentLoaded", function () {
-  // Setup dropdown Job Costing
   setupJobCostingDropdown();
 
-  // Load data dengan nilai default
   loadAndRenderCards();
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === '/' && !event.target.matches('input, textarea')) {
+    event.preventDefault();
+    document.getElementById('searchPDC').focus();
+  }
 });

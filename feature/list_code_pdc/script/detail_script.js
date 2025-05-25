@@ -9,7 +9,15 @@ function initializeDetailPage() {
   const mobilName = params.get("mobilName") || "";
   const pdcName = params.get("pdcName") || "";
   const batchNumber = params.get("batchNumber") || "";
+  const warehouseCode = params.get("warehouseCode")
   const jobCosting = params.get("jobCosting") || "Job Costing 1";
+
+  let status = params.get("status");
+  let message = params.get("message");
+
+  if (status && message) {
+    showToast(message, status);
+  }
 
   // Parse codeData dan describeData
   let codeData = {};
@@ -23,6 +31,7 @@ function initializeDetailPage() {
     if (params.get("describeData")) {
       describeData = JSON.parse(params.get("describeData"));
     }
+    console.log("console penerima deskripsi : ", describeData);
   } catch (error) {
     console.error("Error parsing URL parameters:", error);
   }
@@ -32,10 +41,10 @@ function initializeDetailPage() {
     mobilName: mobilName,
     lokasi: pdcName,
     batch: batchNumber,
+    warehouseCode: warehouseCode,
     jobCostingType: jobCosting,
     describe: Array.isArray(describeData) && describeData.length > 0 ? describeData[0] : "",
     codeData: codeData,
-    codeGudang: "sementara kosong"
   };
 
   // Render HTML dan masukkan ke dalam container
@@ -66,8 +75,8 @@ function generateDetailHTML(currentDetail) {
       <div class="card position-relative">
         <div class="card-body">
           
-          <div class="container bg-primary-subtle p-3 mb-2 rounded position-relative">
-            <h2 class="card-title text-center">Detail Data</h2>
+          <div class="container bg-body-secondary p-2 mb-2 rounded position-relative">
+            <h3 class="card-title text-center text-secondary-emphasis">Detail Data</h3>
           </div>
 
           <div class="container px-4">
@@ -75,18 +84,31 @@ function generateDetailHTML(currentDetail) {
             <div class="text-center">
               <!-- Nama PDC dengan Autocomplete -->
               <div class="mb-2 autocomplete-container">
-                <h3 class="mt-2 mb-3">${currentDetail.lokasi}</h3>
+                <h3 class="mt-2 mb-3 text-secondary-emphasis">${currentDetail.lokasi}</h3>
               </div>
 
               <!-- Nama Mobil -->
               <div class="mb-">
-                <h5 class="mt-2 mb-3">${currentDetail.mobilName}</h5>
+                <h6 class="mt-2 mb-3 text-secondary-emphasis">${currentDetail.mobilName}</h6>
               </div>
             </div>
 
             <button class="btn btn-sm btn-outline-warning position-absolute top-0 end-0 mt-4 me-4" title="Edit" onclick="toggleEdit()">
                   <i class="bi bi-pencil"></i>
             </button>
+
+            <!-- kode gudang -->
+            <div class="mb-3">
+              <label for="kodeGudangInput" class="form-label"><strong>kode gudang:</strong></label>
+              <div class="input-group">
+                <input class="form-control"
+                  value="${currentDetail.warehouseCode}"
+                  readonly/>
+                <button class="btn btn-outline-success" type="button" onclick="copyText('${currentDetail.warehouseCode}')" title="Copy Code Gudang">
+                  <i class="bi bi-clipboard2"></i>
+                </button>
+              </div>
+            </div>
 
             <!-- Keterangan -->
             <div class="mb-3">
@@ -95,31 +117,10 @@ function generateDetailHTML(currentDetail) {
                 <input class="form-control"
                   value="${currentDetail.describe}"
                   readonly/>
-                <button class="btn btn-outline-info" type="button" onclick="copyText('${currentDetail.describe}')" title="Copy Deskripsi">
+                <button class="btn btn-outline-success" type="button" onclick="copyText('${currentDetail.describe}')" title="Copy Keterangan">
                   <i class="bi bi-clipboard2"></i>
                 </button>
               </div>
-            </div>
-
-            <!-- kode gudang -->
-            <div class="mb-3">
-              <label for="kodeGudangInput" class="form-label"><strong>kode gudang:</strong></label>
-              <div class="input-group">
-                <input class="form-control"
-                  value="${currentDetail.codeGudang}"
-                  readonly/>
-                <button class="btn btn-outline-info" type="button" onclick="copyText('${currentDetail.codeGudang}')" title="Copy Deskripsi">
-                  <i class="bi bi-clipboard2"></i>
-                </button>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="jobCostingSelect" class="form-label"><strong>Tipe Job Costing:</strong></label>
-              <select class="form-control" id="jobCostingSelect" disabled>
-                <option value="Job Costing" ${currentDetail.jobCostingType === 'Job Costing 1' ? 'selected' : ''}>Job Costing 1</option>
-                <option value="set" ${currentDetail.jobCostingType === 'Job Costing 2' ? 'selected' : ''}>Job Costing 2</option>
-              </select>
             </div>
 
             <!-- Batch Number -->
@@ -131,6 +132,15 @@ function generateDetailHTML(currentDetail) {
                 value="${currentDetail.batch}" readonly
               />
             </div>
+
+            <div class="mb-3">
+              <label for="jobCostingSelect" class="form-label"><strong>Tipe Job Costing:</strong></label>
+              <select class="form-control" id="jobCostingSelect" disabled>
+                <option value="Job Costing" ${currentDetail.jobCostingType === 'Job Costing 1' ? 'selected' : ''}>Job Costing 1</option>
+                <option value="set" ${currentDetail.jobCostingType === 'Job Costing 2' ? 'selected' : ''}>Job Costing 2</option>
+              </select>
+            </div>
+
             <!-- Dynamic Content based on Job Costing Type -->
             <div id="dynamicJobCostingContent">
               ${renderJobCostingContent(currentDetail)}
@@ -147,8 +157,8 @@ function generateEditModeHtml(currentDetail) {
   return `
     <div class="card position-relative">
       <div class="card-body">
-        <div class="container bg-primary-subtle p-3 mb-2 rounded position-relative">
-          <h2 class="card-title text-center">Detail Data</h2>
+        <div class="container bg-body-secondary p-3 mb-2 rounded position-relative">
+          <h2 class="card-title text-center text-secondary-emphasis">Detail Data</h2>
         </div>
         
         <!-- Nama PDC dengan Autocomplete -->
@@ -173,7 +183,7 @@ function generateEditModeHtml(currentDetail) {
         <!-- Keterangan -->
         <div class="mb-3">
           <label for="kodeGudangInput" class="form-label"><strong>Kode Gudang:</strong></label>
-          <input class="form-control" id="kodeGudangInput" value="${currentDetail.codeGudang}" placeholder="Masukkan keterangan...">
+          <input class="form-control" id="kodeGudangInput" value="${currentDetail.warehouseCode}" placeholder="Masukkan keterangan...">
         </div>
 
         <!-- Job Costing Type Dropdown -->
@@ -215,8 +225,6 @@ function renderJobCostingContent(currentDetail) {
     </div>
     `;
   } else {
-    // Job Costing 2 - Multiple product codes with drag functionality
-    // Untuk Job Costing 2, kita juga buat kosong dulu
     return `
     <div div class="job-costing-2" >
         <label class="form-label"><strong>Kode Produk:</strong></label>
@@ -239,13 +247,11 @@ function renderJobCostingContentEditMode(currentDetail) {
 
     <!-- Tombol tambah -->
     <button
-      class="btn btn-outline-success w-100 mb-3 d-flex align-items-center justify-content-center gap-2" type="button" onclick="addNewProductPair()">
+      class="btn btn-outline-success w-100 mt-2 mb-3 d-flex align-items-center justify-content-center gap-2" type="button" onclick="addNewProductPair()">
       <i class="bi bi-plus-square-fill"> </i> Tambah Pasangan Produk
     </button>
   `;
   } else {
-    // Job Costing 2 - Multiple product codes with drag functionality
-    // Untuk Job Costing 2, kita juga buat kosong dulu
     return `
     <div div class="job-costing-2" >
         <label class="form-label"><strong>Kode Produk:</strong></label>
@@ -327,7 +333,6 @@ function populateCodeData(currentDetail) {
           </div>
         `;
         } else {
-          // VIEW MODE (readonly input + deskripsi + tombol copy)
           newRow.innerHTML = `
           <div class="col-md-6 col-11">
             <div class="job-costing-1">
@@ -343,7 +348,7 @@ function populateCodeData(currentDetail) {
                   placeholder="Deskripsi produk"
                   readonly
                 />
-                <button class="btn btn-outline-info" type="button" onclick="copyText('${key}')" title="Copy Deskripsi">
+                <button class="btn btn-outline-success" type="button" onclick="copyText('${key}')" title="Copy Deskripsi">
                   <i class="bi bi-clipboard2"></i>
                 </button>
               </div>
@@ -363,7 +368,7 @@ function populateCodeData(currentDetail) {
                   placeholder="Kode produk"
                   readonly
                 />
-                <button class="btn btn-outline-info" type="button" onclick="copyText('${value}')" title="Copy Deskripsi">
+                <button class="btn btn-outline-success" type="button" onclick="copyText('${value}')" title="Copy Code">
                   <i class="bi bi-clipboard2"></i>
                 </button>
               </div>
@@ -404,15 +409,26 @@ function populateCodeData(currentDetail) {
         newCodeEdit.className = 'input-group mb-2';
         newCodeEdit.setAttribute('data-idx', idx);
 
-        newCodeEdit.innerHTML = `
-    <span span class="input-group-text drag-handle" style = "cursor: grab;" >
-      <i class="bi bi-grip-horizontal"></i>
+        if (editMode) {
+          newCodeEdit.innerHTML = `
+          <span class="input-group-text drag-handle" style = "cursor: grab;" >
+            <i class="bi bi-grip-horizontal"></i>
           </span >
-          <textarea class="form-control code-edit" rows="1" placeholder="Kode produk...">${value}</textarea>
+          <input class="form-control code-edit" rows="1" value="${value}"></input>
           <button class="btn btn-outline-danger btn-sm remove-code-btn" type="button" title="Hapus kode" onclick="removeCode(this)">
             <i class="bi bi-x"></i>
           </button>
-  `;
+        `;
+        } else {
+          newCodeEdit.innerHTML = `
+          <div class="input-group">
+            <input class="form-control code-edit ps-3" value="${value}" readonly/>
+            <button class="btn btn-outline-success" type="button" onclick="copyText('${value}')" title="Copy Code">
+              <i class="bi bi-clipboard2"></i>
+            </button>
+          </div>
+        `;
+        }
 
         codeEditContainer.appendChild(newCodeEdit);
       }
@@ -425,6 +441,12 @@ function populateCodeData(currentDetail) {
       // Jika tidak ada codeData, tambahkan input kosong
       addEmptyCodeEdits(codeEditContainer);
     }
+
+    new Sortable(codeEditContainer, {
+      handle: '.drag-handle',
+      animation: 300,
+      ghostClass: 'bg-transparent',
+    });
   }
 }
 
@@ -654,7 +676,7 @@ function addNewCode() {
     <span span class="input-group-text drag-handle" style = "cursor: grab;" >
       <i class="bi bi-grip-horizontal"></i>
     </span >
-    <textarea class="form-control code-edit" rows="1" placeholder="Kode produk..."></textarea>
+    <input class="form-control code-edit" rows="1" placeholder="Kode produk..."></input>
     <button class="btn btn-outline-danger btn-sm remove-code-btn" type="button" title="Hapus kode" onclick="removeCode(this)">
       <i class="bi bi-x"></i>
     </button>
@@ -737,7 +759,7 @@ function saveForm() {
   const encodedCodeData = encodeURIComponent(JSON.stringify(codeData));
 
   // Susun URL tujuan
-  const saveUrl = `save.html?pdcName=${encodeURIComponent(pdcName)}&vehicles=${encodeURIComponent(mobilName)}&batch=${encodeURIComponent(batchNumber)}&gudangCode=${encodeURIComponent(kodeGudang)}&describe=${encodeURIComponent(keterangan)}&root=${encodeURIComponent(rootCollection)}&data=${encodedCodeData}&mode=edit`;
+  const saveUrl = `https://ryn-crypto.github.io/feature/list_code_pdc/save.html?pdcName=${encodeURIComponent(pdcName)}&vehicles=${encodeURIComponent(mobilName)}&batch=${encodeURIComponent(batchNumber)}&gudangCode=${encodeURIComponent(kodeGudang)}&describe=${encodeURIComponent(keterangan)}&root=${encodeURIComponent(rootCollection)}&data=${encodedCodeData}&mode=edit`;
 
   // Arahkan ke halaman save.html
   window.location.href = saveUrl;
