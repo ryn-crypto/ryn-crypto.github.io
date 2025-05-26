@@ -6,97 +6,110 @@ const pdcData = [
   {
     PDC: "TOYOTA SUNTER",
     batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    batchNumber2: "Set 35",
+    client: "PTSO"
   },
   {
     PDC: "TOYOTA SUNTER MARUNDA",
     batchNumber1: "Job Costing 37",
-    batchNumber2: "Set 37"
+    batchNumber2: "Set 37",
+    client: "PJKK"
   },
   {
     PDC: "LEXUS",
     batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    batchNumber2: "Set 35",
+    client: "PTAM"
   },
   {
     PDC: "TOYOTA CIBITUNG",
     batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    batchNumber2: "Set 35",
+    client: "PTSO"
   },
   {
     PDC: "TOYOTA CIBITUNG MARUNDA",
     batchNumber1: "Job Costing 37",
-    batchNumber2: "Set 37"
+    batchNumber2: "Set 37",
+    client: "PJKK"
   },
   {
     PDC: "TOYOTA KARAWANG",
     batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    batchNumber2: "Set 35",
+    client: "PTSO"
   },
   {
     PDC: "TOYOTA KARAWANG MARUNDA",
     batchNumber1: "Job Costing 37",
-    batchNumber2: "Set 37"
+    batchNumber2: "Set 37",
+    client: "PJKK"
   },
   {
-    PDC: "PDC UNGU",
-    batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    PDC: "PDC CHERY",
+    batchNumber1: "Job Costing 38",
+    batchNumber2: "Set 38",
+    client: "PTCSI"
   },
   {
-    PDC: "PDC CINERE",
-    batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    PDC: "PDC NETA",
+    batchNumber1: "Job Costing 38",
+    batchNumber2: "Set 38",
+    client: "PNETA"
   },
   {
-    PDC: "PDC BETAWI",
-    batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    PDC: "PDC JETOUR",
+    batchNumber1: "Job Costing 38",
+    batchNumber2: "Set 38",
+    client: "JMI"
   },
   {
-    PDC: "PDC CIBUBUR",
-    batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
-  },
-  {
-    PDC: "PDC GWM HIJAU",
-    batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    PDC: "PDC GWM DAWUAN",
+    batchNumber1: "Job Costing 38",
+    batchNumber2: "Set 38",
+    client: "IIEB"
   },
   {
     PDC: "ISUZU KARAWANG TIMUR",
-    batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    batchNumber1: "Job Costing 38",
+    batchNumber2: "Set 38",
+    client: "PISO"
   },
   {
     PDC: "ISUZU KARAWANG BARAT",
-    batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    batchNumber1: "Job Costing 38",
+    batchNumber2: "Set 38",
+    client: "PISO"
   },
   {
     PDC: "DAIHATSU SUNTER",
-    batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    batchNumber1: "Job Costing 36",
+    batchNumber2: "Set 36",
+    client: "PDSO"
   },
   {
     PDC: "DAIHATSU SUNTER (BATAM)",
-    batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    batchNumber1: "Job Costing 36",
+    batchNumber2: "Set 36",
+    client: "PDSO"
   },
   {
     PDC: "PDC HASRAD",
-    batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    batchNumber1: "Job Costing 37",
+    batchNumber2: "Set 37",
+    client: "PJKK"
   },
   {
     PDC: "PDC DAWUAN",
     batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    batchNumber2: "Set 35",
+    client: "PVB"
   },
   {
     PDC: "PDC BATAM",
-    batchNumber1: "Job Costing 35",
-    batchNumber2: "Set 35"
+    batchNumber1: "Job Costing 37",
+    batchNumber2: "Set 37",
+    client: "PJKK"
   }
 ];
 
